@@ -13,8 +13,8 @@ public class Gestor
 
 String driver = "org.postgresql.Driver";
 String url = "jdbc:postgresql://localhost:5432/test1";
-String user = "bases";
-String passw = "";
+String user = "postgres";
+String passw = "example";
 Connection db;
 Statement st;
 ResultSet rs;
@@ -37,7 +37,7 @@ public void ConexionBD () {
      } 
      catch (SQLException e){ 
 	    JOptionPane j = new JOptionPane();
-	    j.showMessageDialog(null,"No se ha podido acceder a la Base de Datos\n El programa terminará ahora.","ERROR en conexion",j.ERROR_MESSAGE); 
+	    j.showMessageDialog(null,"No se ha podido acceder a la Base de Datos\n El programa terminará ahora.\n"+e,"ERROR en conexion",j.ERROR_MESSAGE); 
 		System.exit(0);
 	 }
 }
