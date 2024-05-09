@@ -59,14 +59,14 @@ public class ANALISIS_SOLICI extends JFrame {
  /* public static void main(String args[])
   {
   ANALISIS_SOLICI V=new ANALISIS_SOLICI();
-  V.show();	
+  V.setVisible(true);
   	
   }*/
 
   void BVOLVER_actionPerformed(ActionEvent e) {
      GESTION_EMPRESAS g = new GESTION_EMPRESAS(bd,emp);
-     g.show();
-     this.hide();
+     g.setVisible(true);
+     this.setVisible(false);
      this.dispose();
   }
 }

@@ -103,9 +103,9 @@ public class ELEGIRSOL extends JFrame {
   }
 
   void BCancelar_actionPerformed(ActionEvent e) {
-    this.hide();
+    this.setVisible(false);
     GESTION_EMPRESAS E=new GESTION_EMPRESAS(bd,emp);
-    E.show();
+    E.setVisible(true);
     this.dispose();
   }
 
@@ -145,8 +145,8 @@ public class ELEGIRSOL extends JFrame {
 	   CANDIDATOS  c = new CANDIDATOS();
 	   c=bd.ConsultarCandidato(user);
 	   SACARCAND sa = new SACARCAND (bd,emp,c);
-	   this.hide();
-	   sa.show();
+	   this.setVisible(false);
+	   sa.setVisible(true);
 	   this.dispose();
        }
        else{

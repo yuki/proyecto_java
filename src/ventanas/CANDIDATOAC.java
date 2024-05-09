@@ -243,9 +243,9 @@ public class CANDIDATOAC extends JFrame {
   }
 
   void BCANCEL_actionPerformed(ActionEvent e) {
-    this.hide();
+    this.setVisible(false);
     GESTION_CANDIDATOS C=new GESTION_CANDIDATOS(bd,can);
-    C.show();
+    C.setVisible(true);
     this.dispose();
   }
 
@@ -305,7 +305,7 @@ public class CANDIDATOAC extends JFrame {
 
 	if (letr){
 	   this.dispose();
-	   this.hide();
+	   this.setVisible(false);
 		user = bd.actualizarCandidato(c);
     int n[];
     n=LISTA1.getSelectedRows();
@@ -325,15 +325,15 @@ public class CANDIDATOAC extends JFrame {
     }//for
 
 	 if (user){
-            this.hide();
+            this.setVisible(false);
 			GESTION_CANDIDATOS C=new GESTION_CANDIDATOS(bd,c);
-            C.show();
+            C.setVisible(true);
 			this.dispose();
 	    }
 		else{
-		    this.hide();
+		    this.setVisible(false);
 			ventanainicial v=new ventanainicial(bd);
-			v.show();
+			v.setVisible(true);
 			this.dispose();
 	    }//else
     }//if  

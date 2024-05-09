@@ -95,20 +95,20 @@ public class CONOCIMIENTOS extends JFrame {
     }
 	if (letr){
 	   this.dispose();
-	   this.hide();
+	   this.setVisible(false);
 	   bd.InsertarConocimiento(con);
-       this.hide();
+       this.setVisible(false);
 	   OFERTAS o=new OFERTAS(bd,emp);
-	   o.show();
+	   o.setVisible(true);
 	   this.dispose();
 	 }
   }
 
   void BCANCELAR_actionPerformed(ActionEvent e) {
-         this.hide();
+         this.setVisible(false);
     OFERTAS j=new OFERTAS(bd,emp);
-    j.show();
+    j.setVisible(true);
     this.dispose();
-	this.hide();
+	this.setVisible(false);
   }
 }                                                                

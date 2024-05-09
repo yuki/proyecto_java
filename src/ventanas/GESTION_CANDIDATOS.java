@@ -92,37 +92,37 @@ public class GESTION_CANDIDATOS extends JFrame {
   }
 
   void BCANCEL_actionPerformed(ActionEvent e) {
-    this.hide();
+    this.setVisible(false);
     ventanainicial v=new ventanainicial(bd);
-    v.show();
+    v.setVisible(true);
     this.dispose();
   }
 
   void BActualizacion_actionPerformed(ActionEvent e) {
-    this.hide();
+    this.setVisible(false);
     CANDIDATOAC C=new CANDIDATOAC(bd,can);
-    C.show();
+    C.setVisible(true);
     this.dispose();
   }
 
   void LBuscarOfertas_actionPerformed(ActionEvent e) {
-    this.hide();
+    this.setVisible(false);
     BUSQUEDAOFERTAS O=new BUSQUEDAOFERTAS(bd,can);
-    O.show();
+    O.setVisible(true);
     this.dispose();
   }
 
   void BConsulta_actionPerformed(ActionEvent e) {
-    this.hide();
+    this.setVisible(false);
     CONSULTASOLICITUDES S=new CONSULTASOLICITUDES(bd,can);
-    S.show();
+    S.setVisible(true);
     this.dispose();
   }
 
   void BCONOCIMIENTOS_actionPerformed(ActionEvent e) {
       DEMANDACONOC d = new DEMANDACONOC(bd,can);
-      d.show();
-      this.hide();
+      d.setVisible(true);
+      this.setVisible(false);
       this.dispose();
   }
 }

@@ -64,10 +64,10 @@ public class INS_COD extends JFrame {
   }
 
   void BVOL_actionPerformed(ActionEvent e) {
-    this.hide();
+    this.setVisible(false);
     this.dispose();
     GESTION_CANDIDATOS c =new GESTION_CANDIDATOS(bd,can);
-    c.show();
+    c.setVisible(true);
   }
 
   void BINSERTAR_actionPerformed(ActionEvent e) {
@@ -76,9 +76,9 @@ public class INS_COD extends JFrame {
       int cod = Integer.parseInt(g);
       sol.setcodigo(cod);
       bd.insertarSolicitud(sol);
-      this.hide();
+      this.setVisible(false);
       this.dispose();
       GESTION_CANDIDATOS c =new GESTION_CANDIDATOS(bd,can);
-      c.show();
+      c.setVisible(true);
   }
 }

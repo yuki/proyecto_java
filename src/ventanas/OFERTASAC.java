@@ -223,9 +223,9 @@ public class OFERTASAC extends JFrame {
    }
 		
 	void BCANCELAR_actionPerformed(ActionEvent e) {
-		this.hide();
+		this.setVisible(false);
 		GESTION_EMPRESAS E =new GESTION_EMPRESAS(bd,emp);
-		E.show();
+		E.setVisible(true);
 		this.dispose();
 		}
 		
@@ -250,7 +250,7 @@ public class OFERTASAC extends JFrame {
       	  }*/
 	  if (letr){
 	    this.dispose();
-	    this.hide();
+	    this.setVisible(false);
 	    bd.ActualizarOferta(of.getUSUARIOEMP(), of.getCODOFERTA(), of.isESTADO());
 		/*int n[];
 		n=CONOCIMIENTOS.getSelectedRows();
@@ -269,16 +269,16 @@ public class OFERTASAC extends JFrame {
 		  bd.InsertarOfertaConoc(o.getCODOFERTA(),cod.intValue());
 	        }//for
 		*/
-             this.hide();
+             this.setVisible(false);
 		GESTION_EMPRESAS E =new GESTION_EMPRESAS(bd,emp);
-		E.show();
+		E.setVisible(true);
 	     this.dispose();
 	  }//if
 	}
 	/*void ICONOC_actionPerformed(ActionEvent e) {
-		this.hide();
+		this.setVisible(false);
 		CONOCIMIENTOS c=new CONOCIMIENTOS(bd,emp);
-		c.show();
+		c.setVisible(true);
 		this.dispose();
 		
 	}*/

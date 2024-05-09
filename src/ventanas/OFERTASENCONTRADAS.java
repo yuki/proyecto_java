@@ -89,8 +89,8 @@ public class OFERTASENCONTRADAS extends JFrame {
 
   void BBUSCAR_actionPerformed(ActionEvent e) {
 	BUSQUEDAOFERTAS bus = new BUSQUEDAOFERTAS (bd,can);
-	this.hide();
-	bus.show();
+	this.setVisible(false);
+	bus.setVisible(true);
 	this.dispose();
   }
 
@@ -120,8 +120,8 @@ public class OFERTASENCONTRADAS extends JFrame {
 	 // bd.insertarSolicitud(sol);
 	  //GESTION_CANDIDATOS ges = new GESTION_CANDIDATOS(bd,can);
     INS_COD ins = new INS_COD(bd,can,sol);
-	  this.hide();
-	  ins.show();
+	  this.setVisible(false);
+	  ins.setVisible(true);
 	  this.dispose();
 	}
   }
@@ -129,6 +129,6 @@ public class OFERTASENCONTRADAS extends JFrame {
   /*public static void main (String[] args){
 	  Gestor con = new Gestor();
      OFERTASENCONTRADAS o = new OFERTASENCONTRADAS(con);
-     o.show();
+     o.setVisible(true);
   }*/
 }

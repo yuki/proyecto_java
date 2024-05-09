@@ -264,9 +264,9 @@ public class SACARCAND extends JFrame {
   }
 
   void BCANCEL_actionPerformed(ActionEvent e) {
-    this.hide();
+    this.setVisible(false);
     GESTION_EMPRESAS C=new GESTION_EMPRESAS(bd,emp);
-    C.show();
+    C.setVisible(true);
     this.dispose();
   }
 

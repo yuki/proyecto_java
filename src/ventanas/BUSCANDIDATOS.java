@@ -88,9 +88,9 @@ public class BUSCANDIDATOS extends JFrame {
   }
 
   void BCancelar_actionPerformed(ActionEvent e) {
-    this.hide();
+    this.setVisible(false);
     GESTION_EMPRESAS E=new GESTION_EMPRESAS(bd,emp);
-    E.show();
+    E.setVisible(true);
     this.dispose();
 
   }
@@ -99,6 +99,6 @@ public class BUSCANDIDATOS extends JFrame {
 	Gestor s=new Gestor();
 	EMPRESAS e=new EMPRESAS();
 	BUSCANDIDATOS b= new BUSCANDIDATOS(s,e);
-	b.show();
+	b.setVisible(true);
   }
 }

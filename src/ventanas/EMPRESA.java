@@ -163,27 +163,27 @@ public class EMPRESA extends JFrame {
     }
 	if (letr){
         this.dispose();
-        this.hide();
+        this.setVisible(false);
 		user = bd.InsertarEmpresa(emp);
 		if (user){
-            this.hide();
+            this.setVisible(false);
 			GESTION_EMPRESAS E=new GESTION_EMPRESAS(bd,emp);
-            E.show();
+            E.setVisible(true);
 			this.dispose();
 	    }
 		else{
-		    this.hide();
+		    this.setVisible(false);
 			ventanainicial v=new ventanainicial(bd);
-			v.show();
+			v.setVisible(true);
 			this.dispose();
 	    }
 	}
   }
 
   void BCANCELAR_actionPerformed(ActionEvent e) {
-    this.hide();
+    this.setVisible(false);
     ventanainicial v=new ventanainicial(bd);
-    v.show();
+    v.setVisible(true);
     this.dispose();
   }
 }

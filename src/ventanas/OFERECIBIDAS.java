@@ -86,9 +86,9 @@ public class OFERECIBIDAS extends JFrame {
   }
 
   void BCancelar_actionPerformed(ActionEvent e) {
-    this.hide();
+    this.setVisible(false);
     GESTION_EMPRESAS E=new GESTION_EMPRESAS(bd,emp);
-    E.show();
+    E.setVisible(true);
     this.dispose();
   }
 
@@ -98,8 +98,8 @@ public class OFERECIBIDAS extends JFrame {
 		String i = TABLA1.getValueAt(n,0).toString();
 		Integer k = Integer.valueOf(i);//tenemos el codigo de la oferta
 		ELEGIRSOL el = new ELEGIRSOL(bd,emp,k.intValue());
-		this.hide();
-		el.show();
+		this.setVisible(false);
+		el.setVisible(true);
 		this.dispose();
 	}
 	else{

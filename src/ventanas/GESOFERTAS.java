@@ -83,9 +83,9 @@ public class GESOFERTAS extends JFrame {
 		}
 
 	void BCancelar_actionPerformed(ActionEvent e) {
-		this.hide();
+		this.setVisible(false);
 		GESTION_EMPRESAS E =new GESTION_EMPRESAS(bd,emp);
-		E.show();
+		E.setVisible(true);
 		this.dispose();
 		}
 
@@ -108,8 +108,8 @@ public class GESOFERTAS extends JFrame {
 		 o=bd.ConsultarOfertas(cod.intValue());//sacamos la oferta con cod COD :D
 		 System.out.println(o.getCODOFERTA());
 	         OFERTASAC v = new OFERTASAC (bd,emp,o);
-	  	 this.hide();
-		 v.show();
+	  	 this.setVisible(false);
+		 v.setVisible(true);
 	  	 this.dispose();
 
 	      }

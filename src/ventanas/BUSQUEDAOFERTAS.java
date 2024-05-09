@@ -196,9 +196,9 @@ public class BUSQUEDAOFERTAS extends JFrame {
   }
 
   void BCANCEL_actionPerformed(ActionEvent e) {
-    this.hide();
+    this.setVisible(false);
     GESTION_CANDIDATOS C=new GESTION_CANDIDATOS(bd,can);
-    C.show();
+    C.setVisible(true);
     this.dispose();
   }
 
@@ -262,8 +262,8 @@ public class BUSQUEDAOFERTAS extends JFrame {
      else con="";
      Object[][] v = bd.BusquedaOfertas(titulo,lugar,cont,emp,su,exp,con);
      OFERTASENCONTRADAS ofert=new OFERTASENCONTRADAS(bd,can,v);
-     this.hide();
-     ofert.show();
+     this.setVisible(false);
+     ofert.setVisible(true);
      this.dispose();
   }//fin boton aceptar
 

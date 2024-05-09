@@ -76,9 +76,9 @@ public class CONSULTASOLICITUDES extends JFrame {
 
 
   void BCANCELAR_actionPerformed(ActionEvent e) {
-    this.hide();
+    this.setVisible(false);
     GESTION_CANDIDATOS C= new  GESTION_CANDIDATOS(bd,can);
-    C.show();
+    C.setVisible(true);
     this.dispose();
   }
 
@@ -90,8 +90,8 @@ public class CONSULTASOLICITUDES extends JFrame {
 	int cod = ((Integer)LISTOFERTAS.getValueAt(l,1)).intValue();
 	bd.borrarSolicitud(cod);
 	GESTION_CANDIDATOS C=new GESTION_CANDIDATOS(bd,can);
-	C.show();
-	this.hide();
+	C.setVisible(true);
+	this.setVisible(false);
 	this.dispose();
   }
 }

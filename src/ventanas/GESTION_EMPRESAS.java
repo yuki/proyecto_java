@@ -78,38 +78,38 @@ public class GESTION_EMPRESAS extends JFrame {
 		}
 
 	void BCANCEL_actionPerformed(ActionEvent e) {
-		this.hide();
+		this.setVisible(false);
 		ventanainicial v=new ventanainicial(bd);
-		v.show();
+		v.setVisible(true);
 		this.dispose();
 		}
 
 	void BPUBLICAR_actionPerformed(ActionEvent e) {
-		this.hide();
+		this.setVisible(false);
 		OFERTAS O =new OFERTAS(bd,emp);
-		O.show();
+		O.setVisible(true);
 		this.dispose();
 		}
 
 	void BCONSULTAR_actionPerformed(ActionEvent e) {
-		this.hide();
+		this.setVisible(false);
 		GESOFERTAS O = new GESOFERTAS(bd, emp);
-		O.show();
+		O.setVisible(true);
 		this.dispose();
 		}
 
 	void BANALIZAR_actionPerformed(ActionEvent e) {
-		this.hide();
+		this.setVisible(false);
 		OFERECIBIDAS O=new OFERECIBIDAS(bd,emp);
-		O.show();
+		O.setVisible(true);
 		this.dispose();
 
 		}
 
 	void BBUSCAR_actionPerformed(ActionEvent e) {
-		this.hide();
+		this.setVisible(false);
 		BUSCANDIDATOS C= new BUSCANDIDATOS(bd,emp);
-		C.show();
+		C.setVisible(true);
 		this.dispose();
 		}
 

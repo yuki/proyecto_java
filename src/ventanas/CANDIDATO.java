@@ -204,10 +204,10 @@ public class CANDIDATO extends JFrame {
   }
 
   void BCANCEL_actionPerformed(ActionEvent e) {
-    this.hide();
+    this.setVisible(false);
     //GESTION_CANDIDATOS C=new GESTION_CANDIDATOS();
 	ventanainicial v= new ventanainicial(bd);
-    v.show();
+    v.setVisible(true);
     this.dispose();
   }
 
@@ -274,7 +274,7 @@ public class CANDIDATO extends JFrame {
     }
     if (letr){
 	   this.dispose();
-	   this.hide();
+	   this.setVisible(false);
 	   user = bd.InsertarCandidato(c);
            int n[];
           n=LISTA1.getSelectedRows();
@@ -292,15 +292,15 @@ public class CANDIDATO extends JFrame {
 	      bd.insertaCandCono(c.getusuario(),cod.intValue());
        }//for
 	if (user){
-            this.hide();
+            this.setVisible(false);
 			GESTION_CANDIDATOS C=new GESTION_CANDIDATOS(bd,c);
-            C.show();
+            C.setVisible(true);
 			this.dispose();
 	}
 	else{
-		    this.hide();
+		    this.setVisible(false);
 			ventanainicial v=new ventanainicial(bd);
-			v.show();
+			v.setVisible(true);
 			this.dispose();
 	}
     }//if

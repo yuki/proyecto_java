@@ -111,16 +111,16 @@ public class ventanainicial extends JFrame {
 		}
 
 	void BEmpresa_actionPerformed(ActionEvent e) {
-		this.hide();
+		this.setVisible(false);
 		EMPRESA E=new EMPRESA(bd);
-		E.show();
+		E.setVisible(true);
 		this.dispose();
 		}
 
 	void BCandidato_actionPerformed(ActionEvent e) {
-		this.hide();
+		this.setVisible(false);
 		CANDIDATO C=new  CANDIDATO(bd);
-		C.show();
+		C.setVisible(true);
 		this.dispose();
 		}
 
@@ -133,9 +133,9 @@ public class ventanainicial extends JFrame {
 				EMPRESAS emp = new EMPRESAS();
 				emp=bd.ExisteEmpresa(TNombre.getText(),pass);
 				if (emp.gettelefono()!=0) {//si el telefono fuese 0, significa que no se ha metido numero, con lo que no hay empresa
-					this.hide();
+					this.setVisible(false);
 					GESTION_EMPRESAS E=new GESTION_EMPRESAS(bd,emp);
-					E.show();
+					E.setVisible(true);
 					this.dispose();
 					}
 				}
@@ -148,9 +148,9 @@ public class ventanainicial extends JFrame {
 				CANDIDATOS can = new CANDIDATOS();
 				can = bd.ExisteCandidato(TNombre.getText(),pass);
 				if (can.gettelefono()!=0){
-					this.hide();
+					this.setVisible(false);
 					GESTION_CANDIDATOS C=new GESTION_CANDIDATOS(bd,can);
-					C.show();
+					C.setVisible(true);
 					this.dispose();
 					}
 				}
@@ -172,6 +172,6 @@ public class ventanainicial extends JFrame {
 		con.CargarDriver();
 		con.ConexionBD();
 		ventanainicial v = new ventanainicial(con);
-		v.show();
+		v.setVisible(true);
 		}
 	}

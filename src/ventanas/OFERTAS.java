@@ -188,9 +188,9 @@ public class OFERTAS extends JFrame {
 		}
 		
 	void BCANCELAR_actionPerformed(ActionEvent e) {
-		this.hide();
+		this.setVisible(false);
 		GESTION_EMPRESAS E =new GESTION_EMPRESAS(bd,emp);
-		E.show();
+		E.setVisible(true);
 		this.dispose();
 		}
 		
@@ -248,7 +248,7 @@ public class OFERTAS extends JFrame {
       }
 	  if (letr){
 	    this.dispose();
-	    this.hide();
+	    this.setVisible(false);
 	    bd.InsertarOferta(o);
 		int n[];
 		n=CONOCIMIENTOS.getSelectedRows();
@@ -266,16 +266,16 @@ public class OFERTAS extends JFrame {
 		  System.out.println("bien");
 		  bd.InsertarOfertaConoc(o.getCODOFERTA(),cod.intValue());
 	        } 		
-        this.hide();
+        this.setVisible(false);
 		GESTION_EMPRESAS E =new GESTION_EMPRESAS(bd,emp);
-		E.show();
+		E.setVisible(true);
 	    this.dispose();
 	  }
 	}
 	void ICONOC_actionPerformed(ActionEvent e) {
-		this.hide();
+		this.setVisible(false);
 		CONOCIMIENTOS c=new CONOCIMIENTOS(bd,emp);
-		c.show();
+		c.setVisible(true);
 		this.dispose();
 		
 		}

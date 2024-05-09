@@ -57,9 +57,9 @@ public class DEMANDACONOC extends JFrame {
   }
 
   void JVOLVER_actionPerformed(ActionEvent e) {
-    this.hide();
+    this.setVisible(false);
     this.dispose();
     GESTION_CANDIDATOS g = new GESTION_CANDIDATOS(bd,can);
-    g.show();
+    g.setVisible(true);
   }
 }
