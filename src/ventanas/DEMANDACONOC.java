@@ -32,7 +32,7 @@ public class DEMANDACONOC extends JFrame {
 	  this.setSize(560,430);
   data = new Object[3];
   data[1]="Nombre";
-  data[2]="nº veces";
+  data[2]="nÂº veces";
   data[0]="Cod";
   lin=bd.ContarConocimientos();
   CONOCIMIENTOS = new JTable(lin,data);

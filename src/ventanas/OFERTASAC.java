@@ -111,7 +111,7 @@ public class OFERTASAC extends JFrame {
 		CESTADO.setBackground(Color.white);
 		CESTADO.setText("Active para desactivar la oferta");
 		CESTADO.setBounds(new Rectangle(20, 439, 213, 31));
-		BACPETAR.setToolTipText("Añade tu oferta");
+		BACPETAR.setToolTipText("AÃ±ade tu oferta");
 		BACPETAR.setText("Aceptar");
 		BACPETAR.setBounds(new Rectangle(172, 505, 112, 35));
 		BACPETAR.addActionListener(new java.awt.event.ActionListener() {
@@ -150,7 +150,7 @@ public class OFERTASAC extends JFrame {
 										 }
 									 });
 		*/
-		LExperiencia.setToolTipText("Introducir años de experiencia");
+		LExperiencia.setToolTipText("Introducir aÃ±os de experiencia");
     LExperiencia.setText("Experiencia:");
     LExperiencia.setBounds(new Rectangle(16, 378, 97, 28));
     Experiencia.setBounds(new Rectangle(107, 378, 65, 31));

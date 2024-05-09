@@ -32,8 +32,8 @@ public class SACARCAND extends JFrame {
   JTextField IMes = new JTextField();
   JLabel dia = new JLabel();
   JLabel mes = new JLabel();
-  JLabel LAño = new JLabel();
-  JTextField año = new JTextField();
+  JLabel LAÃ±o = new JLabel();
+  JTextField aÃ±o = new JTextField();
   JButton BAceptar = new JButton();
   JButton BCANCEL = new JButton();
   JCheckBox CARNET = new JCheckBox();
@@ -109,9 +109,9 @@ public class SACARCAND extends JFrame {
     dia.setBounds(new Rectangle(393, 227, 34, 20));
     mes.setText("Mes:");
     mes.setBounds(new Rectangle(447, 228, 32, 20));
-    LAño.setText("Año:");
-    LAño.setBounds(new Rectangle(507, 229, 28, 20));
-    año.setBounds(new Rectangle(534, 227, 30, 23));
+    LAÃ±o.setText("AÃ±o:");
+    LAÃ±o.setBounds(new Rectangle(507, 229, 28, 20));
+    aÃ±o.setBounds(new Rectangle(534, 227, 30, 23));
     BAceptar.setText("ACEPTAR");
     BAceptar.setBounds(new Rectangle(120, 512, 153, 32));
     /*BAceptar.addActionListener(new java.awt.event.ActionListener() {
@@ -138,7 +138,7 @@ public class SACARCAND extends JFrame {
     DISPV.setText("Disponiblidad viajar");
     DISPV.setBounds(new Rectangle(17, 337, 147, 19));
     this.getContentPane().setBackground(Color.white);
-    LExperiencia.setToolTipText("Introducca el numero de años de experiencia");
+    LExperiencia.setToolTipText("Introducca el numero de aÃ±os de experiencia");
     LExperiencia.setText("Experiencia:");
     LExperiencia.setBounds(new Rectangle(17, 252, 94, 31));
     TExperiencia.setBounds(new Rectangle(107, 257, 47, 23));
@@ -186,8 +186,8 @@ public class SACARCAND extends JFrame {
     this.getContentPane().add(IDia, null);
     this.getContentPane().add(mes, null);
     this.getContentPane().add(IMes, null);
-    this.getContentPane().add(LAño, null);
-    this.getContentPane().add(año, null);
+    this.getContentPane().add(LAÃ±o, null);
+    this.getContentPane().add(aÃ±o, null);
     this.getContentPane().add(ITelefono, null);
     this.getContentPane().add(IApel1, null);
     this.getContentPane().add(DISPV, null);
@@ -227,7 +227,7 @@ public class SACARCAND extends JFrame {
 	i=new Integer(can.getmes());
 	IMes.setText(i.toString());
 	i=new Integer(can.getanyo());
-	año.setText(i.toString());
+	aÃ±o.setText(i.toString());
 	CARNET.setSelected(can.getcarnet());
 	COCHE.setSelected(can.getcoche());
 	DISPV.setSelected(can.getdispviajar());
@@ -246,7 +246,7 @@ public class SACARCAND extends JFrame {
 	ITelefono.setEnabled(false);
 	IDia.setEnabled(false);
 	IMes.setEnabled(false);
-	año.setEnabled(false);
+	aÃ±o.setEnabled(false);
 	CARNET.setEnabled(false);
 	COCHE.setEnabled(false);
 	DISPV.setEnabled(false);

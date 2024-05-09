@@ -75,11 +75,11 @@ CREATE TABLE solicitudes (	--tabla para las solicitudes
 	anyo	NUMERIC(4)
 );
 
-INSERT INTO empresa VALUES('panda','panda','PANDA ANTIVIRUS',7891001,'calle Gran Via nº9',94416028);
-INSERT INTO empresa VALUES('timo','timo','Timofonocia',90210210,'calle autonomia nº39',650213243);
-INSERT INTO empresa VALUES('gnu','gnu','GPL Software Design',42910012,'calle vitoria nº18',947662593);
-INSERT INTO candidatos VALUES ('yuki','yuki','Yuki','San', 'Avda. Cataluña nº99',934566541,'yeims@hotmail.com',15,10,1980, 'true','false','false','licenciado en económicas','inglés técnico y contabilidad aplicada',2,'Prácticas en La Caixa'); 
-INSERT INTO candidatos VALUES ('jaca','jaca','Javier','Carranza', 'calle Oviedo nº31',945346523,'laurod@yahoo.es',25,11,1970, 'true','true','true','licenciada en biología','aleman nivel avanzado',7,'Centro de recuperación de Animales salvajes 1995-2002');
+INSERT INTO empresa VALUES('panda','panda','PANDA ANTIVIRUS',7891001,'calle Gran Via nÂº9',94416028);
+INSERT INTO empresa VALUES('timo','timo','Timofonocia',90210210,'calle autonomia nÂº39',650213243);
+INSERT INTO empresa VALUES('gnu','gnu','GPL Software Design',42910012,'calle vitoria nÂº18',947662593);
+INSERT INTO candidatos VALUES ('yuki','yuki','Yuki','San', 'Avda. CataluÃ±a nÂº99',934566541,'yeims@hotmail.com',15,10,1980, 'true','false','false','licenciado en econÃ³micas','inglÃ©s tÃ©cnico y contabilidad aplicada',2,'PrÃ¡cticas en La Caixa'); 
+INSERT INTO candidatos VALUES ('jaca','jaca','Javier','Carranza', 'calle Oviedo nÂº31',945346523,'laurod@yahoo.es',25,11,1970, 'true','true','true','licenciada en biologÃ­a','aleman nivel avanzado',7,'Centro de recuperaciÃ³n de Animales salvajes 1995-2002');
 INSERT INTO conocimientos VALUES (1,'ingles');
 INSERT INTO conocimientos VALUES (2,'euskera');
 INSERT INTO conocimientos VALUES (3,'frances');

@@ -40,7 +40,7 @@ public class CONSULTASOLICITUDES extends JFrame {
     data[4]="Empresa";
     data[5]="Dia";
     data[6]="Mes";
-    data[7]="Año";
+    data[7]="AÃ±o";
     lin = bd.misSolicitudes(can.getusuario());
     LISTOFERTAS = new JTable(lin,data);
     LTITULO.setFont(new java.awt.Font("Serif", 0, 40));
@@ -85,7 +85,7 @@ public class CONSULTASOLICITUDES extends JFrame {
 
   void BELIMINAR_actionPerformed(ActionEvent e) {
 //	JOptionPane j = new JOptionPane();
-//	j.showConfirmDialog(null,"¿Está seguro de que quiere eliminar la solicitud?","Alerta",JOptionPane.YES_NO_OPTION);
+//	j.showConfirmDialog(null,"Â¿EstÃ¡ seguro de que quiere eliminar la solicitud?","Alerta",JOptionPane.YES_NO_OPTION);
 	int l = LISTOFERTAS.getSelectedRow();
 	int cod = ((Integer)LISTOFERTAS.getValueAt(l,1)).intValue();
 	bd.borrarSolicitud(cod);

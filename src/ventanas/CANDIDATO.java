@@ -32,8 +32,8 @@ public class CANDIDATO extends JFrame {
   JTextField IMes = new JTextField();
   JLabel dia = new JLabel();
   JLabel mes = new JLabel();
-  JLabel LAño = new JLabel();
-  JTextField año = new JTextField();
+  JLabel LAÃ±o = new JLabel();
+  JTextField aÃ±o = new JTextField();
   JLabel LEstudios = new JLabel();
   JLabel LOtros = new JLabel();
   JLabel VidaLab = new JLabel();
@@ -110,9 +110,9 @@ public class CANDIDATO extends JFrame {
     dia.setBounds(new Rectangle(422, 216, 34, 20));
     mes.setText("Mes:");
     mes.setBounds(new Rectangle(476, 217, 32, 20));
-    LAño.setText("Año:");
-    LAño.setBounds(new Rectangle(536, 218, 28, 20));
-    año.setBounds(new Rectangle(563, 216, 30, 23));
+    LAÃ±o.setText("AÃ±o:");
+    LAÃ±o.setBounds(new Rectangle(536, 218, 28, 20));
+    aÃ±o.setBounds(new Rectangle(563, 216, 30, 23));
     LEstudios.setText("Estudios:");
     LEstudios.setBounds(new Rectangle(277, 335, 93, 19));
     LOtros.setText("Otros conocimientos:");
@@ -148,7 +148,7 @@ public class CANDIDATO extends JFrame {
     DISPV.setText("Disponiblidad viajar");
     DISPV.setBounds(new Rectangle(18, 364, 147, 19));
     this.getContentPane().setBackground(Color.white);
-    LExperiencia.setToolTipText("Introduzca enumero de años de experiencia");
+    LExperiencia.setToolTipText("Introduzca enumero de aÃ±os de experiencia");
     LExperiencia.setText("Experiencia:");
     LExperiencia.setBounds(new Rectangle(16, 263, 77, 27));
     Experiencia.setBounds(new Rectangle(113, 263, 48, 24));
@@ -170,12 +170,12 @@ public class CANDIDATO extends JFrame {
     this.getContentPane().add(Tcandidato, null);
     this.getContentPane().add(ITelefono, null);
     this.getContentPane().add(IApel1, null);
-    this.getContentPane().add(LAño, null);
+    this.getContentPane().add(LAÃ±o, null);
     this.getContentPane().add(dia, null);
     this.getContentPane().add(IDia, null);
     this.getContentPane().add(mes, null);
     this.getContentPane().add(IMes, null);
-    this.getContentPane().add(año, null);
+    this.getContentPane().add(aÃ±o, null);
     this.getContentPane().add(LFecha, null);
     this.getContentPane().add(jScrollPane2, null);
     this.getContentPane().add(LOtros, null);
@@ -242,8 +242,8 @@ public class CANDIDATO extends JFrame {
 		 c.setmes(i);
      
                  
-		 c.vacio("Año",año.getText());
-		 i=c.nums("Año",año.getText());
+		 c.vacio("AÃ±o",aÃ±o.getText());
+		 i=c.nums("AÃ±o",aÃ±o.getText());
 		 c.anyo(i);
 		 c.setanyo(i);
 		 c.setcoche(COCHE.isSelected());

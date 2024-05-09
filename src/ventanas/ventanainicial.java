@@ -19,8 +19,8 @@ public class ventanainicial extends JFrame {
 	JLabel LNuevo = new JLabel();
 	JLabel Lnombre = new JLabel();
 	JTextField TNombre = new JTextField();
-	JLabel Lcontraseña = new JLabel();
-	JPasswordField TContraseña = new JPasswordField();
+	JLabel LcontraseÃ±a = new JLabel();
+	JPasswordField TContraseÃ±a = new JPasswordField();
 	JButton BAceptar = new JButton();
 	JButton BSALIR = new JButton();
 
@@ -73,9 +73,9 @@ public class ventanainicial extends JFrame {
 		Lnombre.setText("Usuario:");
 		Lnombre.setBounds(new Rectangle(110, 280, 100, 20));
 		TNombre.setBounds(new Rectangle(226, 279, 196, 23));
-		Lcontraseña.setText("Password:");
-		Lcontraseña.setBounds(new Rectangle(134, 313, 75, 20));
-		TContraseña.setBounds(new Rectangle(226, 313, 194, 22));
+		LcontraseÃ±a.setText("Password:");
+		LcontraseÃ±a.setBounds(new Rectangle(134, 313, 75, 20));
+		TContraseÃ±a.setBounds(new Rectangle(226, 313, 194, 22));
 		BAceptar.setToolTipText("Introduce tu nombre y tu clave para entrar DIMITRI.CON");
 		BAceptar.setText("ACEPTAR");
 		BAceptar.setBounds(new Rectangle(462, 284, 113, 42));
@@ -103,10 +103,10 @@ public class ventanainicial extends JFrame {
 		this.getContentPane().add(BAceptar, null);
 		this.getContentPane().add(TNombre, null);
 		this.getContentPane().add(Lnombre, null);
-		this.getContentPane().add(TContraseña, null);
+		this.getContentPane().add(TContraseÃ±a, null);
 		this.getContentPane().add(BSALIR, null);
 		this.getContentPane().add(LNuevo, null);
-		this.getContentPane().add(Lcontraseña, null);
+		this.getContentPane().add(LcontraseÃ±a, null);
 		this.setSize(600,500);
 		}
 
@@ -126,7 +126,7 @@ public class ventanainicial extends JFrame {
 
 	void BAceptar_actionPerformed(ActionEvent e) {
 		boolean b=false;
-		String pass = new String (TContraseña.getPassword());
+		String pass = new String (TContraseÃ±a.getPassword());
 		b = bd.ExisteE(TNombre.getText(),pass);
 		if (b){
 			try{

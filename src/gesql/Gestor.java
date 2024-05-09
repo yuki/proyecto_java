@@ -25,7 +25,7 @@ public void CargarDriver () {
    }
    catch (ClassNotFoundException e) {
        JOptionPane j = new JOptionPane();
-	   j.showMessageDialog(null,"No se ha podido encontrar el driver para hacer la conexion a la Base de Datos\n El programa terminar· ahora","ERROR en driver",j.ERROR_MESSAGE); 
+	   j.showMessageDialog(null,"No se ha podido encontrar el driver para hacer la conexion a la Base de Datos\n El programa terminar√° ahora","ERROR en driver",j.ERROR_MESSAGE); 
 	   System.exit(0);
    }
 }
@@ -37,7 +37,7 @@ public void ConexionBD () {
      } 
      catch (SQLException e){ 
 	    JOptionPane j = new JOptionPane();
-	    j.showMessageDialog(null,"No se ha podido acceder a la Base de Datos\n El programa terminar· ahora.","ERROR en conexion",j.ERROR_MESSAGE); 
+	    j.showMessageDialog(null,"No se ha podido acceder a la Base de Datos\n El programa terminar√° ahora.","ERROR en conexion",j.ERROR_MESSAGE); 
 		System.exit(0);
 	 }
 }

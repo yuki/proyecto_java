@@ -33,7 +33,7 @@ public class ANALISIS_SOLICI extends JFrame {
   private void jbInit(Gestor bd, EMPRESAS emp) throws Exception {
     data = new Object[2];
   data[0]="Cod. Oferta";
-  data[1]="nº candidatos";
+  data[1]="nÂº candidatos";
   lin=bd.SacarSolicitud(emp.getusuario());
     LTIT.setFont(new java.awt.Font("Serif", 0, 40));
     LTIT.setText("ANALISIS DE SOLICITUDES");
