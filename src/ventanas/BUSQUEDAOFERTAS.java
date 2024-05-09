@@ -228,9 +228,9 @@ public class BUSQUEDAOFERTAS extends JFrame {
 	     emp=Tempresa.getText();
      else emp="";
      if (Lsueldo.isSelected()){
-	     Integer un = new Integer(-1);
+	     Integer un = Integer.valueOf(-1);
 	     try{
-		     un=new Integer(Tsueldo.getText());  
+		     un=Integer.valueOf(Tsueldo.getText());
 		     su=un.intValue();
 	     }
 	     catch (Exception exc){  
@@ -242,9 +242,9 @@ public class BUSQUEDAOFERTAS extends JFrame {
      }
      else su=-1;
      if (Lexperiencia.isSelected()){
-	     Integer dos=new Integer(-1);
+	     Integer dos=Integer.valueOf(-1);
 	     try{
-	        dos=new Integer(Texperiencia.getText());
+	        dos=Integer.valueOf(Texperiencia.getText());
 	        exp=dos.intValue();
 	     }
 	     catch (Exception exc){

@@ -94,10 +94,10 @@ public class GESOFERTAS extends JFrame {
 	   //System.out.println(r);
 	   if (r!=-1){
 	      String s=LOFERTAS.getValueAt(r,0).toString();
-	      Integer cod=new Integer(-1);
-	      Integer mal=new Integer(-1);
+	      Integer cod=Integer.valueOf(-1);
+	      Integer mal=Integer.valueOf(-1);
 	      try{
-		   cod = new Integer(s);
+		   cod = Integer.valueOf(s);
 	      }
 	      catch(Exception ef){
 		   //no da error porque la columna 0 siempre tiene numeros

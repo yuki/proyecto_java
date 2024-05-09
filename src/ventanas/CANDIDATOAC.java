@@ -218,18 +218,18 @@ public class CANDIDATOAC extends JFrame {
 	IApel1.setText(can.getapellidos());
 	IEmail.setText(can.getemail());
 	IDireccion.setText(can.getdireccion());
-	Integer i=new Integer(can.gettelefono());
+	Integer i=Integer.valueOf(can.gettelefono());
 	ITelefono.setText(i.toString());
-	i=new Integer(can.getdia());
+	i=Integer.valueOf(can.getdia());
 	IDia.setText(i.toString());
-	i=new Integer(can.getmes());
+	i=Integer.valueOf(can.getmes());
 	IMes.setText(i.toString());
-	i=new Integer(can.getanyo());
+	i=Integer.valueOf(can.getanyo());
 	año.setText(i.toString());
 	CARNET.setSelected(can.getcarnet());
 	COCHE.setSelected(can.getcoche());
 	DISPV.setSelected(can.getdispviajar());
-	i=new Integer (can.getexperiencia());
+	i=Integer.valueOf(can.getexperiencia());
 	TExperiencia.setText(i.toString());
 	TESTUDIOS.setText(can.getestudios());
 	TOTROS.setText(can.getotrosconoz());
@@ -312,14 +312,14 @@ public class CANDIDATOAC extends JFrame {
     for (int j=0;j<n.length;j++){
          String s = LISTA1.getValueAt(n[j], 0).toString();
 
-         Integer cod = new Integer (-1);
+         Integer cod = Integer.valueOf(-1);
          try{
-            cod = new Integer (s);
+            cod = Integer.valueOf(s);
          }
          catch (Exception ex){
             //no puede dar error porque en la BD son int's
          }
-	      Integer ma =new Integer(-1);
+	      Integer ma =Integer.valueOf(-1);
 	 if (!bd.sacarUnConocimiento(c.getusuario(),cod.intValue()))  //asi no mete los conoc que ya tenemos
              bd.insertaCandCono(c.getusuario(),cod.intValue());
     }//for

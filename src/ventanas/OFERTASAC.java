@@ -187,7 +187,7 @@ public class OFERTASAC extends JFrame {
 	jScrollPane4.getViewport().add(TDESCRIPCION, null);
 	this.setSize(645,595);
 	//ACTUALIZAMOS LOS BOTONES CON LO RECIBIDO
-	Integer j = new Integer(of.getCODOFERTA());
+	Integer j = Integer.valueOf(of.getCODOFERTA());
 	TCODIGO.setText(j.toString());
 	TTITULO.setText(of.getTITULO());
 	String s = of.getCONTRATO();
@@ -199,15 +199,15 @@ public class OFERTASAC extends JFrame {
 	   CContrato.setSelectedIndex(2);
 	if (s.equals("Temp. t.parcial"));
 	   CContrato.setSelectedIndex(3);
-	j = new Integer (of.getSUELDOMAX());
+	j = Integer.valueOf(of.getSUELDOMAX());
 	TSUELDOMAX.setText(j.toString());
-	j = new Integer (of.getSUELDOMIN());
+	j = Integer.valueOf(of.getSUELDOMIN());
 	TSUELDOMIN.setText(j.toString());
 	CESTADO.setSelected(of.isESTADO());
 	TVALORARA.setText(of.getSEVALORARA());
 	TDESCRIPCION.setText(of.getDESCRIP());
 	TLUGAR.setText(of.getLUGAR());
-	j = new Integer (of.getEXPERIENCIA());
+	j = Integer.valueOf(of.getEXPERIENCIA());
 	Experiencia.setText(j.toString());
 	//PONEMOS A ENABLED(FALSE) A todo
 	TCODIGO.setEnabled(false);
@@ -257,14 +257,14 @@ public class OFERTASAC extends JFrame {
 		for (int j=0;j<n.length;j++){
 		//	System.out.println (CONOCIMIENTOS.getValueAt(n[j],0));
 		    String s = CONOCIMIENTOS.getValueAt(n[j], 0).toString();
-		    Integer cod = new Integer (-1);
+		    Integer cod = Integer.valueOf(-1);
 		  try{
-		    cod = new Integer (s);
+		    cod = Integer.valueOf(s);
 		  }
                   catch (Exception ex){
 			//si da error no se insertara en la BD
 		  }
-		  Integer ma =new Integer(-1);
+		  Integer ma =Integer.valueOf(-1);
 		  //System.out.println("bien");
 		  bd.InsertarOfertaConoc(o.getCODOFERTA(),cod.intValue());
 	        }//for

@@ -265,7 +265,7 @@ public Object[][] misConocimientos(String user, String como){
 	    i=0;
 	    consultarBD(s);
 	    while (rs.next()){
-		  can[i][0]=new Integer(rs.getInt(1));
+		  can[i][0]=Integer.valueOf(rs.getInt(1));
 		  can[i][1]=rs.getString(2);
 		  i++;
 	    }
@@ -293,7 +293,7 @@ public Object[][]  sacarConocimientos (){
 		consultarBD(s);
 		i=0;
 		while (this.rs.next()){
-			Integer j =new Integer(rs.getInt(1));
+			Integer j =Integer.valueOf(rs.getInt(1));
 			con[i][0]=j;
 			con[i][1]=rs.getString(2);
 			i++;
@@ -343,25 +343,25 @@ public Object[][] misOfertas (String userEmpresa){
               consultarBD(s);
               i = 0;
 	     while (rs.next()){
-		     Integer k = new Integer (rs.getInt(1));
+		     Integer k = Integer.valueOf(rs.getInt(1));
                         v[i][0] = k;//codofer
                         v[i][1] = rs.getString(2);//titulo
                         //v[i][2] = rs.getString(3);//descr
                         v[i][2] = rs.getString(4);//lugar
                         v[i][3] = rs.getString(5);//contrato
-                        k = new Integer (rs.getInt(6));//sueldomin
+                        k = Integer.valueOf(rs.getInt(6));//sueldomin
                         v[i][4] = k;
-                        k = new Integer (rs.getInt(7));//sueldomax
+                        k = Integer.valueOf(rs.getInt(7));//sueldomax
                         v[i][5] = k;
-                        k = new Integer (rs.getInt(8));//experiencia
+                        k = Integer.valueOf(rs.getInt(8));//experiencia
                         v[i][6] = k;
 			//v[i][8] = rs.getString(9);//sevalora
                         //v[i][9] = rs.getString(10);//imprescin
-                        k = new Integer (rs.getInt(11));//dia
+                        k = Integer.valueOf(rs.getInt(11));//dia
                         v[i][7] = k;
-                        k = new Integer (rs.getInt(12));//mes
+                        k = Integer.valueOf(rs.getInt(12));//mes
                         v[i][8] = k;
-                        k = new Integer (rs.getInt(13));//anyo
+                        k = Integer.valueOf(rs.getInt(13));//anyo
                         v[i][9] = k;
 			boolean b =rs.getBoolean(14);//estado
 			if (b)
@@ -451,25 +451,25 @@ public Object[][] BusquedaOfertas (String titulo, String lugar, String contrato,
 			consultarBD(s);
 			i=0;
 			while(this.rs.next()){
-				Integer k=new Integer (rs.getInt(1));
+				Integer k=Integer.valueOf(rs.getInt(1));
 				v[i][0]=k;//cod
 				v[i][1]=rs.getString("titulo");//titulo
 				v[i][2]=rs.getString(3);//descr
 				v[i][3]=rs.getString(4);//lugar
 				v[i][4]=rs.getString(5);//con
-				k=new Integer(rs.getInt(6));//suelmax
+				k=Integer.valueOf(rs.getInt(6));//suelmax
 				v[i][5]=k;
-				k=new Integer(rs.getInt(7));//suelmin
+				k=Integer.valueOf(rs.getInt(7));//suelmin
 				v[i][6]=k;
-				k=new Integer(rs.getInt(8));//exp
+				k=Integer.valueOf(rs.getInt(8));//exp
 				v[i][7]=k;
 				v[i][8]=rs.getString(9);//valorara
 				v[i][9]=rs.getString(10);//impres
-				k=new Integer(rs.getInt(11));//dia
+				k=Integer.valueOf(rs.getInt(11));//dia
 				v[i][10]=k;
-				k=new Integer(rs.getInt(12));//mes
+				k=Integer.valueOf(rs.getInt(12));//mes
 				v[i][11]=k;
-				k=new Integer(rs.getInt(13));//anyo
+				k=Integer.valueOf(rs.getInt(13));//anyo
 				v[i][12]=k;
 				boolean b= rs.getBoolean(14);//estado
 				if (b)
@@ -509,9 +509,9 @@ public Object[][] sacarSolicitudes(int codigosol){
 	    i=0;
 	    while (rs.next()){
 		  v[i][0]=rs.getString(3);//user candidato
-		  v[i][1]=new Integer (rs.getInt(4));//dia
-		  v[i][2]=new Integer (rs.getInt(5));//mes
-		  v[i][3]=new Integer (rs.getInt(6));//anyo
+		  v[i][1]=Integer.valueOf(rs.getInt(4));//dia
+		  v[i][2]=Integer.valueOf(rs.getInt(5));//mes
+		  v[i][3]=Integer.valueOf(rs.getInt(6));//anyo
 		 i++;
 	    }
 	    return v;
@@ -552,17 +552,17 @@ public Object[][] misSolicitudes(String user)
 			if (b) k = "true";
 			else k = "false";	
 			v[i][0] = k;
-			Integer o = new Integer(rs.getInt(2));
+			Integer o = Integer.valueOf(rs.getInt(2));
 			v[i][1] = o;
 			v[i][2] = rs.getString(3);
-			o = new Integer(rs.getInt(4));
+			o = Integer.valueOf(rs.getInt(4));
 			v[i][3] = o;
 			v[i][4] = rs.getString(5);
-			o = new Integer(rs.getInt(6));
+			o = Integer.valueOf(rs.getInt(6));
 			v[i][5] = o;
-			o = new Integer(rs.getInt(7));
+			o = Integer.valueOf(rs.getInt(7));
 			v[i][6] = o;
-			o = new Integer(rs.getInt(8));
+			o = Integer.valueOf(rs.getInt(8));
 			v[i][7] = o;
 			i++;
 		}//while
@@ -593,7 +593,7 @@ public Object[][] ContarConocimientos () {
 		consultarBD(s);
 		while (this.rs.next()) {
 			v[i][1]=rs.getString(2);
-			Integer j = new Integer(rs.getInt(1));
+			Integer j = Integer.valueOf(rs.getInt(1));
 			v[i][0]=j;
 			i++;
 		}
@@ -601,13 +601,13 @@ public Object[][] ContarConocimientos () {
 	  int k =0;
 	  for (int h=0;h<MAX;h++){
 	    String l = v[h][0].toString();
-	    Integer m = new Integer (l);
+	    Integer m = Integer.valueOf(l);
 	    k = m.intValue(); 
 	    s = new String ("select count(*) from oferta_conoc where c_cod="+k+" ;");
 	    this.consultarBD(s);
 	    try{
 		while(rs.next()){
-			Integer ala = new Integer (rs.getInt(1));
+			Integer ala = Integer.valueOf(rs.getInt(1));
 			v[h][2] = ala;
 		}
 	    }
@@ -638,7 +638,7 @@ public Object[][] ConocimientosDeEmpresa (int coferta){
 	  cerrarConsulta();
 	  consultarBD(s);
 	  while (rs.next()){
-		  Integer j =new Integer (rs.getInt(1));
+		  Integer j =Integer.valueOf(rs.getInt(1));
 		  v[i][0]=j;
 		  v[i][1]=rs.getString(2);
 		  i++;
@@ -669,9 +669,9 @@ public Object[][] SacarSolicitud (String e_user)
 		v = new Object[i][2];
 		i=0;
 		while (this.rs.next()) {
-			Integer j = new Integer (rs.getInt(1));
+			Integer j = Integer.valueOf(rs.getInt(1));
 			v[i][0]=j;
-			j=new Integer(rs.getInt(2));
+			j=Integer.valueOf(rs.getInt(2));
 			v[i][1]=j;
 			i++;
 		}
@@ -731,7 +731,7 @@ public Object[][] OfertasASolicitudes (int o_cod) {
 	  consultarBD(s);
 	  i=0;
 	  while(this.rs.next()){
-              Integer j = new Integer (rs.getInt(1));
+              Integer j = Integer.valueOf(rs.getInt(1));
               v[i][0]=j;
 	      i++;
           }
@@ -757,7 +757,7 @@ public Object[][] ConsultarCodOferta (String e) {
      i=0;
      consultarBD(s);
       while (rs.next()){
-         Integer k = new Integer(rs.getInt (1));
+         Integer k = Integer.valueOf(rs.getInt (1));
 	 v[i][0]=k;
 	 v[i][1]=rs.getString(2);
 	 i++;

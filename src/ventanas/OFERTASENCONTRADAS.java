@@ -104,7 +104,7 @@ public class OFERTASENCONTRADAS extends JFrame {
 	if (n!=-1){
 	  String s = TOFERTAS.getValueAt(n,0).toString();
 	  //System.out.println (s);
-	  Integer cod = new Integer(0);
+	  Integer cod = Integer.valueOf(0);
 	  int doc=-1;
 	  try{
 		doc = cod.parseInt(s);

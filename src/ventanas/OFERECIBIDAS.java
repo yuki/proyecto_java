@@ -96,7 +96,7 @@ public class OFERECIBIDAS extends JFrame {
 	int n = TABLA1.getSelectedRow();
 	if (n!=-1){
 		String i = TABLA1.getValueAt(n,0).toString();
-		Integer k = new Integer (i);//tenemos el codigo de la oferta
+		Integer k = Integer.valueOf(i);//tenemos el codigo de la oferta
 		ELEGIRSOL el = new ELEGIRSOL(bd,emp,k.intValue());
 		this.hide();
 		el.show();

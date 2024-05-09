@@ -281,14 +281,14 @@ public class CANDIDATO extends JFrame {
        for (int j=0;j<n.length;j++){
          String s = LISTA1.getValueAt(n[j], 0).toString();//saca el codigo
 
-         Integer cod = new Integer (-1);
+         Integer cod = Integer.valueOf(-1);
          try{
-            cod = new Integer (s);
+            cod = Integer.valueOf(s);
          }
          catch (Exception ex){
             //no puede dar error porque en la BD son int's
          }
-	      Integer ma =new Integer(-1);
+	      Integer ma =Integer.valueOf(-1);
 	      bd.insertaCandCono(c.getusuario(),cod.intValue());
        }//for
 	if (user){

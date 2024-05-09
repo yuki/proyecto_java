@@ -255,14 +255,14 @@ public class OFERTAS extends JFrame {
 		for (int j=0;j<n.length;j++){
 			System.out.println (CONOCIMIENTOS.getValueAt(n[j],0));
 		    String s = CONOCIMIENTOS.getValueAt(n[j], 0).toString();
-		    Integer cod = new Integer (-1);
+		    Integer cod = Integer.valueOf(-1);
 		  try{
-		    cod = new Integer (s);
+		    cod = Integer.valueOf(s);
 		  }
                   catch (Exception ex){
 			//si da error no se insertara en la BD
 		  }
-		  Integer ma =new Integer(-1);
+		  Integer ma =Integer.valueOf(-1);
 		  System.out.println("bien");
 		  bd.InsertarOfertaConoc(o.getCODOFERTA(),cod.intValue());
 	        } 		
