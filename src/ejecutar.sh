@@ -4,4 +4,4 @@ echo
 echo "Ejecutando programa"
 echo "*******************"
 echo
-java VENTANAS.ventanainicial
+java -cp ".:postgresql-42.7.3.jar" ventanas.ventanainicial
